@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copiar Chave do PIX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        a {
+            text-decoration: none;
+            color: red;
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        a.copied {
+            color: green;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function copiarChave() {
+            const chavePix = "0007f99c-a5bc-43c0-9aff-852078c34750"; // Substitua pela sua chave do PIX
+            const textarea = document.createElement("textarea");
+            textarea.value = chavePix;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+            
+            const link = document.querySelector("a");
+            link.classList.add("copied");
+            link.innerText = "Chave do PIX copiada!";
+            
+            setTimeout(() => {
+                link.classList.remove("copied");
+                link.innerText = "Copiar chave do PIX";
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <h1>Copiar Chave do PIX</h1>
+    <a href="#" onclick="copiarChave(); return false;">Copiar chave do PIX</a>
+</body>
+</html>
