@@ -8,20 +8,32 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 0;
+            background: url('https://example.com/imagem-pix.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        h1 {
             margin-top: 50px;
+            font-size: 2em;
         }
         a {
+            display: inline-block;
             text-decoration: none;
-            color: red;
-            font-size: 20px;
-            cursor: pointer;
-            transition: color 0.3s;
+            color: #ffcc00;
+            font-size: 1.5em;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
         }
         a.copied {
-            color: green;
+            color: #00ff00;
+            background: rgba(0, 0, 0, 0.8);
         }
         a:hover {
-            text-decoration: underline;
+            background: rgba(0, 0, 0, 0.7);
         }
     </style>
     <script>
