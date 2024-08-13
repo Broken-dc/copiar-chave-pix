@@ -25,7 +25,7 @@
             display: inline-block;
             text-decoration: none;
             color: #ffcc00;
-            font-size: 1.5em;
+            font-size: 3em; /* Tamanho do texto dobrado */
             background: rgba(0, 0, 0, 0.5);
             padding: 10px 20px;
             border-radius: 5px;
@@ -47,21 +47,4 @@
             document.body.appendChild(textarea);
             textarea.select();
             document.execCommand("copy");
-            document.body.removeChild(textarea);
-            
-            const link = document.querySelector("a");
-            link.classList.add("copied");
-            link.innerText = "Chave do PIX copiada!";
-            
-            setTimeout(() => {
-                link.classList.remove("copied");
-                link.innerText = "Copiar chave do PIX";
-            }, 3000);
-        }
-    </script>
-</head>
-<body>
-    <h1>Copiar Chave do PIX</h1>
-    <a href="#" onclick="copiarChave(); return false;">Copiar chave do PIX</a>
-</body>
-</html>
+            document.body.removeChild(te
