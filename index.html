@@ -38,6 +38,11 @@
         a:hover {
             background: rgba(0, 0, 0, 0.7);
         }
+        img {
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
     </style>
     <script>
         function copiarChave() {
@@ -55,5 +60,8 @@
 <body>
     <h1>Clique abaixo para COPIAR Chave do PIX</h1>
     <a href="#" onclick="copiarChave()">COPIAR CHAVE PIX</a>
+
+    <!-- QR Code gerado com a chave PIX -->
+    <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=0007f99c-a5bc-43c0-9aff-852078c34750&choe=UTF-8" alt="QR Code para pagamento via PIX">
 </body>
 </html>
