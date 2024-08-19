@@ -7,25 +7,33 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             background: url('https://digitalagro.com.br/wp-content/uploads/2023/08/pix-a-internacionalizacao-do-sistema-de-pagamento-instantaneo-brasileiro.png') no-repeat center center fixed;
             background-size: cover;
             color: white;
+            text-align: center;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 90%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
         h1 {
-            margin-top: 50px;
-            font-size: 2.5em;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 10px;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
         a {
             display: inline-block;
             text-decoration: none;
             color: #ffcc00;
-            font-size: 3.5em;
+            font-size: 1.5em;
             background: rgba(0, 0, 0, 0.5);
             padding: 15px 25px;
             border-radius: 5px;
@@ -40,13 +48,15 @@
         }
         img {
             margin-top: 20px;
+            max-width: 100%;
+            height: auto;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
     </style>
     <script>
         function copiarChave() {
-            const chavePix = "0007f99c-a5bc-43c0-9aff-852078c34750"; // Substitua pela sua chave do PIX
+            const chavePix = "0007f99c-a5bc-43c0-9aff-852078c34750";
             const textarea = document.createElement("textarea");
             textarea.value = chavePix;
             document.body.appendChild(textarea);
@@ -58,10 +68,10 @@
     </script>
 </head>
 <body>
-    <h1>Clique abaixo para COPIAR Chave do PIX</h1>
-    <a href="#" onclick="copiarChave()">COPIAR CHAVE PIX</a>
-
-    <!-- QR Code com o link fornecido -->
-    <img src="https://github.com/Broken-dc/copiar-chave-pix/blob/c1d53e0bd7bcc89a4c02f10dfbb9babd577d0e73/qr-code.png?raw=true" alt="QR Code para pagamento via PIX">
+    <div class="container">
+        <h1>Clique abaixo para COPIAR Chave do PIX</h1>
+        <a href="#" onclick="copiarChave()">COPIAR CHAVE PIX</a>
+        <img src="https://github.com/Broken-dc/copiar-chave-pix/blob/c1d53e0bd7bcc89a4c02f10dfbb9babd577d0e73/qr-code.png?raw=true" alt="QR Code para pagamento via PIX">
+    </div>
 </body>
 </html>
