@@ -16,7 +16,7 @@
         }
         h1 {
             margin-top: 50px;
-            font-size: 2em;
+            font-size: 2.5em; /* Tamanho ajustado */
             background: rgba(0, 0, 0, 0.5);
             padding: 10px;
             border-radius: 10px;
@@ -25,9 +25,9 @@
             display: inline-block;
             text-decoration: none;
             color: #ffcc00;
-            font-size: 3em; /* Tamanho do texto dobrado */
+            font-size: 3.5em; /* Tamanho ajustado */
             background: rgba(0, 0, 0, 0.5);
-            padding: 10px 20px;
+            padding: 15px 25px; /* Aumentei o padding */
             border-radius: 5px;
             transition: background 0.3s, color 0.3s;
         }
@@ -47,4 +47,13 @@
             document.body.appendChild(textarea);
             textarea.select();
             document.execCommand("copy");
-            document.body.removeChild(te
+            document.body.removeChild(textarea);
+            alert("Chave PIX copiada!");
+        }
+    </script>
+</head>
+<body>
+    <h1>Clique abaixo para COPIAR Chave do PIX</h1>
+    <a href="#" onclick="copiarChave()">COPIAR CHAVE PIX</a>
+</body>
+</html>
